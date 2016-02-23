@@ -17,7 +17,7 @@ function getAndSaveUsers(config, since) {
       var count = users.length;
       console.log(new Date().toLocaleString(), ' - ', count, 'active users');
       piGlow(function(error, pi) {
-        pi.reset();
+        pi.reset;
         if (count > 10) {
           pi.all = 150;
         } else {
