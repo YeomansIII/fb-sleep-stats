@@ -1,6 +1,7 @@
 var Q = require('q');
 var _ = require('lodash');
 var request = require('request-promise');
+require('es6-promise');
 
 var facebookService = {};
 
@@ -25,4 +26,3 @@ facebookService.getUsers = _.memoize(function(accessToken, userIds) {
 });
 
 module.exports = facebookService;
-

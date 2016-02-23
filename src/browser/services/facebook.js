@@ -1,5 +1,6 @@
 var Q = require('q');
 var facebookService = {};
+require('es6-promise');
 
 var fbPromise = Q.Promise(function(resolve) {
     window.fbAsyncInit = function() {

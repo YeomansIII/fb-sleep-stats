@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
 var config = require('./config/development.json');
+require('es6-promise').polyfill();
 
 
 module.exports = {
