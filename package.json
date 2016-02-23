@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node ./index.js",
     "scrape": "node ./scrape.js",
-    "forever-scrape": "forever -a start -l scrape.log scrape.js",
-    "forever-server": "forever -a start -l server.log index.js",
+    "forever-scrape": "forever -a start -l scrape.log scrape.js --uid \"sleepscrape\"",
+    "forever-server": "forever -a start -l server.log index.js --uid \"sleepserver\"",
     "debug": "node-debug --no-preload ./index.js",
     "watch": "webpack --watch --progress",
     "build-minified": "webpack --progress --optimize-minimize",
