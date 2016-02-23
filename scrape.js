@@ -18,8 +18,14 @@ function getAndSaveUsers(config, since) {
       console.log(new Date().toLocaleString(), ' - ', count, 'active users');
       piGlow(function(error, pi) {
         pi.reset;
-        if (count > 10) {
+        if (count >= 10) {
           pi.all = 100;
+        } else if (count >= 5) {
+          pi.startTransaction();
+          pi.ring_5 = 90;
+          pi.ring_4 = 60;
+          pi.ring_3 = 50;
+          pi.commitTransaction();
         } else {
           pi.ring_5 = 50;
         }
