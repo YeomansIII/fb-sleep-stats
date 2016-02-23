@@ -19,15 +19,15 @@ function getAndSaveUsers(config, since) {
       piGlow(function(error, pi) {
         pi.reset;
         if (count >= 10) {
-          pi.all = 100;
+          pi.all = 20;
         } else if (count >= 5) {
           pi.startTransaction();
-          pi.ring_5 = 90;
-          pi.ring_4 = 60;
-          pi.ring_3 = 50;
+          pi.ring_5 = 20;
+          pi.ring_4 = 15;
+          pi.ring_3 = 10;
           pi.commitTransaction();
         } else {
-          pi.ring_5 = 50;
+          pi.ring_5 = 20;
         }
       });
       return userService.saveUsers(users);
@@ -37,7 +37,7 @@ function getAndSaveUsers(config, since) {
         ' - Could not get users:', err.message, err.statusCode);
       piGlow(function(error, pi) {
         pi.reset();
-        pi.ring_0 = 50;
+        pi.ring_0 = 20;
       });
     })
     .then(function() {
